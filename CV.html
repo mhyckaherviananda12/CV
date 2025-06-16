@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Mhycka Herviananda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #e0f2fe, #f0f9ff);
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      padding: 3rem;
+    }
+    .tab-btn {
+      transition: 0.3s ease;
+    }
+    .tab-btn:hover {
+      transform: scale(1.05);
+    }
+    .active-tab {
+      background-color: #1d4ed8;
+      color: white;
+    }
+    .inactive-tab {
+      background-color: #e0e7ff;
+      color: #1e40af;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+  <main class="max-w-4xl mx-auto my-12">
+    <div class="card">
+      <!-- Header -->
+      <header class="flex flex-col md:flex-row items-center md:items-start mb-10 gap-6">
+        <img src="foto.jpg" alt="Foto Profil"
+             class="w-32 h-32 rounded-full object-cover shadow-md border-4 border-blue-200" />
+        <div class="md:ml-6 text-center md:text-left">
+          <h1 class="text-4xl font-bold text-blue-800">Mhycka Herviananda Yuwono</h1>
+          <p class="text-lg text-blue-700 mt-1 font-semibold">Mahasiswa Universitas Negeri Yogyakarta</p>
+          <p class="text-md text-blue-600 font-medium">Alumni SMAN 4 Berau</p>
+          <p class="text-sm text-blue-600 font-medium">📧 mhyckaherviananda.2024@student.uny.ac.id</p>
+        </div>
+      </header>
+
+      <!-- Pendidikan -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-800 border-b pb-1 border-blue-300">📘 Pendidikan</h2>
+        <ul class="list-disc ml-6 mt-3 text-blue-900 space-y-1 font-medium">
+          <li>SMA Negeri 4 Berau – IPA</li>
+          <li>Universitas Negeri Yogyakarta – Pendidikan Teknik Mekatronika</li>
+        </ul>
+      </section>
+
+      <!-- Keahlian -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-800 border-b pb-1 border-blue-300">💻 Keahlian</h2>
+        <div class="flex flex-wrap gap-3 mt-3 font-medium">
+          <span class="bg-blue-100 text-blue-900 px-4 py-1 rounded-full text-sm shadow">Editing Video</span>
+          <span class="bg-blue-100 text-blue-900 px-4 py-1 rounded-full text-sm shadow">Optimasi Sosial Media</span>
+          <span class="bg-blue-100 text-blue-900 px-4 py-1 rounded-full text-sm shadow">Public Speaking</span>
+          <span class="bg-blue-100 text-blue-900 px-4 py-1 rounded-full text-sm shadow">Pemrograman (Basic)</span>
+        </div>
+      </section>
+
+      <!-- Organisasi -->
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-blue-800 border-b pb-1 border-blue-300">👥 Pengalaman Organisasi</h2>
+        <ul class="list-disc ml-6 mt-3 text-blue-900 space-y-1 font-medium">
+          <li>Duta Perpustakaan SMAN 4 Berau (2023)</li>
+          <li>Ketua Rohis At-Tadzkir SMAN 4 Berau (2023)</li>
+          <li>Ketua IKROB Berau (2023)</li>
+          <li>Duta Wisata Kabupaten Berau (2023)</li>
+          <li>Asosiasi Duta Wisata Kab. Berau (2023)</li>
+          <li>Aksara Berau (2023)</li>
+          <li>Garden Library Puri SMAN 4 Berau (2023)</li>
+        </ul>
+      </section>
+
+      <!-- Prestasi -->
+      <section>
+        <h2 class="text-2xl font-bold text-blue-800 border-b pb-1 border-blue-300 mb-4">🏆 Prestasi</h2>
+        <div class="flex gap-3 mb-5 flex-wrap">
+          <button onclick="showPrestasi('2023', event)" class="tab-btn active-tab px-4 py-2 rounded font-semibold shadow">2023</button>
+          <button onclick="showPrestasi('2024', event)" class="tab-btn inactive-tab px-4 py-2 rounded font-semibold shadow">2024</button>
+          <button onclick="showPrestasi('2025', event)" class="tab-btn inactive-tab px-4 py-2 rounded font-semibold shadow">2025</button>
+        </div>
+
+        <!-- Prestasi 2023 -->
+        <div id="prestasi-2023" class="prestasi-tahun">
+          <ul class="list-disc ml-6 space-y-1 text-blue-900 font-medium">
+            <li>Juara 1 Penulis Cerita Dwibahasa "Talinga Sagai" (Tingkat Provinsi Kaltim)</li>
+            <li>Best Media Sosial Agai Duta Wisata Kab. Berau</li>
+            <li>Juara 3 Film Pendek FLS2N Kab. Berau</li>
+            <li>Juara 1 Film Pendek Festival Seni Pramuka Kwarcab</li>
+            <li>Juara 2 Duta Baca SMAN 4 Berau</li>
+            <li>SIMPATIZEN – Siswa Berprestasi SMAN 4 Berau</li>
+            <li>Buku "Talinga Sagai" diterbitkan ber-ISBN</li>
+          </ul>
+        </div>
+
+        <!-- Prestasi 2024 -->
+        <div id="prestasi-2024" class="prestasi-tahun hidden">
+          <ul class="list-disc ml-6 space-y-1 text-blue-900 font-medium">
+            <li>Juara 2 Film Pendek "Bersama untuk Negeri" (Tingkat Kabupaten)</li>
+          </ul>
+        </div>
+
+        <!-- Prestasi 2025 -->
+        <div id="prestasi-2025" class="prestasi-tahun hidden">
+          <ul class="list-disc ml-6 space-y-1 text-blue-900 font-medium">
+            <li>
+              Kejuaraan UNITY Competition #13 (Smart City)<br />
+              <span class="text-sm italic text-blue-700">Peserta & Juara 3 | 2025</span><br />
+              <span>Membuat proyek smart farming berbasis IoT dan berhasil meraih juara 3 dalam kompetisi tingkat nasional.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    function showPrestasi(tahun, event) {
+      const tahunList = ['2023', '2024', '2025'];
+      tahunList.forEach(t => {
+        document.getElementById(`prestasi-${t}`).classList.add('hidden');
+      });
+      document.getElementById(`prestasi-${tahun}`).classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active-tab');
+        btn.classList.add('inactive-tab');
+      });
+      event.target.classList.add('active-tab');
+      event.target.classList.remove('inactive-tab');
+    }
+  </script>
+
+</body>
+</html>
